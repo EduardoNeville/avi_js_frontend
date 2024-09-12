@@ -27,17 +27,17 @@ const App = () => {
   };
 
   return (
-    <div className="container mx-auto p-4">
+    <div className="container bg-bg_col mx-auto p-4">
       <header className="mb-4">
-        <h1 className="text-3xl font-bold">Algorithmic Value Investing</h1>
+        <h1 className="text-mkt_h1 font-primary_col font-bold">Algorithmic Value Investing</h1>
       </header>
       <section className="hero mb-4">
-        <p className="text-lg">Investing in the future, one algorithm at a time.</p>
+        <p className="text-mkt_h3 font-txt_col">Investing in the future, one algorithm at a time.</p>
       </section>
-      <section className="search mb-4">
+      <section className="search bg-primary_col font-bg_col mb-4">
         <input
           type="text"
-          className="px-4 py-2 border rounded w-3/4"
+          className=" px-4 py-2 border rounded w-3/4"
           placeholder="Search by CIK, Company Name, Industry, or Office"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
@@ -52,12 +52,12 @@ const App = () => {
       </section>
 
       <section className="results mb-4">
-        <table className="min-w-full bg-white">
+        <table className="min-w-full text-txt_col">
           <thead>
             <tr>
-              <th className="py-2">Name</th>
-              <th className="py-2">Industry Title</th>
-              <th className="py-2">Office</th>
+              <th className="text-prod_h3 py-2">Name</th>
+              <th className="text-prod_h3 py-2">Industry Title</th>
+              <th className="text-prod_h3 py-2">Office</th>
             </tr>
           </thead>
           <tbody>
@@ -67,9 +67,9 @@ const App = () => {
                 key={result.cik}
                 onClick={() => handleSearchCompanyInfo(result.cik)}
               >
-                <td className="py-2">{result.name}</td>
-                <td className="py-2">{result.industry_title}</td>
-                <td className="py-2">{result.office}</td>
+                <td className="text-prod_p py-2">{result.name}</td>
+                <td className="text-prod_p py-2">{result.industry_title}</td>
+                <td className="text-prod_p py-2">{result.office}</td>
               </tr>
             ))}
           </tbody>
