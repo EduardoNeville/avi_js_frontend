@@ -27,7 +27,8 @@ const App = () => {
   };
 
   return (
-    <div className="container bg-bg_col mx-auto p-4">
+    <div className='bg-bg_col'>
+    <div className="container mx-auto p-4">
       <header className="mb-4">
         <h1 className="text-mkt_h1 font-primary_col font-bold">Algorithmic Value Investing</h1>
       </header>
@@ -77,6 +78,7 @@ const App = () => {
       </section>
 
       {queryCompanyInfo && <CompanyInfo cik={queryCompanyInfo} />}
+    </div>
     </div>
   );
 };
