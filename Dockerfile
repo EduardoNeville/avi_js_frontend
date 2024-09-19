@@ -2,7 +2,7 @@ FROM node:alpine
 
 RUN echo "We are in the frontend Dockerfile"
 
-WORKDIR /usr/src/avi_js_frontend
+WORKDIR /avi_frontend
 
 COPY package*.json .
 
@@ -14,6 +14,8 @@ ENV VITE_HOST=0.0.0.0
 ENV VITE_PORT=$PORT
 ENV PROXY_API=$PROXY_API
 
-EXPOSE 5000
+EXPOSE 5173
 
-CMD [ "npm", "run", "build" ]
+RUN npm run build
+
+CMD ["npm", "run", "dev"]
